@@ -77,9 +77,12 @@ const Header = () => {
           <StyledNavItem>
             <StyledSelect>
               <option value="">All Categories</option>
-              <option value="math">Math</option>
-              <option value="science">Science</option>
-              <option value="history">History</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Mobile App Development">Mobile App Development</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
             </StyledSelect>
           </StyledNavItem>
           <StyledNavItem>

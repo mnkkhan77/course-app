@@ -6,6 +6,8 @@ import Home from './components/Home';
 import CourseList from './components/CourseList';
 import CourseDetails from './components/CourseDetails';
 import LoginForm from './components/LoginForm';
+import PaymentForm from './components/PaymentForm';
+import Cart from './components/Cart';
 
 const App = () => {
   return (
@@ -13,12 +15,13 @@ const App = () => {
       <AuthProvider>
         <Header />
         <Routes>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/courses" component={CourseList} />
-          <Route path="/courses/:id" component={CourseDetails} />
-          <Route path="/login" component={LoginForm} />
-          {/* Add more routes as needed */}
-        </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/courses" element={<CourseList />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route path="/payment" element={<PaymentForm />} />
+          <Route path="/cart" element={<Cart />} />
+      </Routes>
       </AuthProvider>
     </Router>
   );

@@ -1,33 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
+import './courseList.css'; // Import the CSS file for styling
 
-const StyledCourseList = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const StyledCourseItem = styled.li`
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-`;
+const courses = [
+  { id: 1, title: 'Introduction to React', category: 'Web Development', price: 10 },
+  { id: 2, title: 'Python for Beginners', category: 'Programming', price: 20 },
+  { id: 3, title: 'Data Science Fundamentals', category: 'Data Science', price: 15 },
+];
 
 const CourseList = () => {
-  const courses = [
-    { id: 1, title: 'Course 1' },
-    { id: 2, title: 'Course 2' },
-    // Add more course data as needed
-  ];
-
+  
   return (
-    <StyledCourseList>
-      <h2>Courses</h2>
-      <ul>
+    <div>
+      <h2 className="course-list-heading">Course List</h2>
+      <div className="course-list-container">
         {courses.map((course) => (
-          <StyledCourseItem key={course.id}>{course.title}</StyledCourseItem>
+          <div key={course.id} className="course-card">
+            <h3>{course.title}</h3>
+            <p>Category: {course.category}</p>
+            <p>Price: ${course.price}</p>
+          </div>
         ))}
-      </ul>
-    </StyledCourseList>
+      </div>
+    </div>
   );
 };
 
